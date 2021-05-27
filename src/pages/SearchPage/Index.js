@@ -3,7 +3,7 @@ import Input from "../../components/Input/Index";
 import Button from "../../components/Button/Index";
 import IconButton from "../../components/IconButton/Index";
 
-export default function SearchPage() {
+export default function SearchPage({ pokemonInfo, setPokemonInfo }) {
   const [pokemon, setPokemon] = useState("");
 
   const inputCallback = (event, setterFunction) => {
@@ -16,7 +16,11 @@ export default function SearchPage() {
         setPokemon={setPokemon}
         inputCallback={inputCallback}
       />
-      <Button pokemon={pokemon} />
+      <Button
+        pokemon={pokemon}
+        pokemonInfo={pokemonInfo}
+        setPokemonInfo={setPokemonInfo}
+      />
       <IconButton />
     </div>
   );
