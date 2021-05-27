@@ -1,11 +1,13 @@
 import getPokemon from "../../api/GetPokemon";
 
-export default function Button({ pokemon }) {
+export default function Button({ pokemon, pokemonInfo, setPokemonInfo }) {
   const buttonCallback = () => {
     if (pokemon === "") {
       alert("wallah écrit le nom d'un pokemon");
     }
-    getPokemon(pokemon);
+    getPokemon(pokemon).then((responseJson) => {
+      setPokemonInfo(responseJson);
+    });
   };
   return (
     <div>

@@ -8,11 +8,9 @@ export default async function getPokemon(pokemon) {
     },
     method: "GET",
   };
-  await fetch(url, request)
-    .then((response) => response.json())
-    .then((responseJson) => {
-      console.log(responseJson);
-      return responseJson;
+  return await fetch(url, request)
+    .then((response) => {
+      return response.json();
     })
     .catch((error) => console.log(error));
 }
