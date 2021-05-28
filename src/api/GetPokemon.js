@@ -1,4 +1,4 @@
-export default async function getPokemon(pokemon) {
+export default async function GetPokemon(pokemon) {
   let url = "https://pokeapi.co/api/v2/pokemon/" + pokemon;
 
   let request = {
