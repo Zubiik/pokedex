@@ -1,6 +1,6 @@
 import GetPokemon from "../../api/GetPokemon";
 import GetPokemonDescription from "../../api/GetPokemonDescription";
-
+import { SearchButtonCustom } from "./styled.js";
 export default function Button({
   pokemon,
   pokemonInfo,
@@ -20,8 +20,8 @@ export default function Button({
     });
   };
   return (
-    <div>
+    <SearchButtonCustom>
       <button onClick={buttonCallback}>search</button>
-    </div>
+    </SearchButtonCustom>
   );
 }

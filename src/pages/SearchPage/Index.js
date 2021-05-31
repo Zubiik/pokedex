@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "../../components/Input/Index";
 import Button from "../../components/Button/Index";
 import IconButton from "../../components/IconButton/Index";
+import { SearchPageCustom } from "./styled.js";
 
 export default function SearchPage({
   pokemonInfo,
@@ -15,7 +16,7 @@ export default function SearchPage({
     setterFunction(event.target.value);
   };
   return (
-    <div>
+    <SearchPageCustom>
       <Input
         pokemon={pokemon}
         setPokemon={setPokemon}
@@ -29,6 +30,6 @@ export default function SearchPage({
         setPokemonDescription={setPokemonDescription}
       />
       <IconButton />
-    </div>
+    </SearchPageCustom>
   );
 }

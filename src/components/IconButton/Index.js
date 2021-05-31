@@ -1,5 +1,5 @@
 import getPokemon from "../../api/GetPokemon";
-
+import { RandomuttonCustom } from "./styled.js";
 export default function IconButton() {
   const buttonCallback = () => {
     const pokemonId = Math.round(Math.random() * (151 - 1) + 1);
@@ -9,8 +9,8 @@ export default function IconButton() {
   //console.log(buttonCallback());
 
   return (
-    <div>
+    <RandomuttonCustom>
       <button onClick={buttonCallback}>random</button>
-    </div>
+    </RandomuttonCustom>
   );
 }
