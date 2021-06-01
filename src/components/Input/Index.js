@@ -1,15 +1,14 @@
-import { useState } from "react";
-import { InputCustom } from "./styled.js";
+import { InputContainerCustom, InputCustom, TextCustom } from "./styled.js";
 export default function Input({ pokemon, setPokemon, inputCallback }) {
   return (
-    <InputCustom>
-      <p>Pokemon name or id</p>
-      <input
+    <InputContainerCustom>
+      <TextCustom>POKEMON NAME OR ID</TextCustom>
+      <InputCustom
         name={pokemon}
         onChange={(event) => {
           inputCallback(event, setPokemon);
         }}
-      ></input>
-    </InputCustom>
+      ></InputCustom>
+    </InputContainerCustom>
   );
 }

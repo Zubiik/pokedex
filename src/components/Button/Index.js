@@ -1,6 +1,6 @@
 import GetPokemon from "../../api/GetPokemon";
 import GetPokemonDescription from "../../api/GetPokemonDescription";
-import { SearchButtonCustom } from "./styled.js";
+import { SearchButtonCustom, SearchTextCustom } from "./styled.js";
 export default function Button({
   pokemon,
   pokemonInfo,
@@ -21,7 +21,7 @@ export default function Button({
   };
   return (
     <SearchButtonCustom>
-      <button onClick={buttonCallback}>search</button>
+      <SearchTextCustom onClick={buttonCallback}>Search!</SearchTextCustom>
     </SearchButtonCustom>
   );
 }
