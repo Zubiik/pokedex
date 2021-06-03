@@ -4,7 +4,6 @@ export default function Info({
   pokemonDescription,
   setPokemonDescription,
 }) {
-  console.log(pokemonInfo);
   return (
     <div>
       <p>{pokemonInfo.weight}</p>

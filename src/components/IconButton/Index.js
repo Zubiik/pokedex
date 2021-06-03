@@ -1,12 +1,19 @@
-import getPokemon from "../../api/GetPokemon";
+import GetPokemon from "../../api/GetPokemon";
+import GetPokemonDescription from "../../api/GetPokemonDescription";
 import { RandomuttonCustom } from "./styled.js";
 import Vector from "../../image/Vector.png";
-export default function IconButton() {
+
+export default function IconButton({ setPokemonInfo, setPokemonDescription }) {
   const buttonCallback = () => {
     const pokemonId = Math.round(Math.random() * (151 - 1) + 1);
-    getPokemon(pokemonId);
+
+    GetPokemon(pokemonId).then((responseJson) => {
+      setPokemonInfo(responseJson);
+    });
+    GetPokemonDescription(pokemonId).then((responseJson) => {
+      setPokemonDescription(responseJson);
+    });
   };
-  //console.log(buttonCallback());
 
   return (
     <RandomuttonCustom>

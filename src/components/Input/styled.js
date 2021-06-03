@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 
 export const InputContainerCustom = styled.div`
-  border: 1px pink solid;
   display: flex;
   flex-direction: column;
   align-items: center;
