@@ -5,7 +5,7 @@ import Vector from "../../image/Vector.png";
 
 export default function IconButton({ setPokemonInfo, setPokemonDescription }) {
   const buttonCallback = () => {
-    let pokemonId = Math.round(Math.random() * (151 - 1) + 1);
+    const pokemonId = Math.round(Math.random() * (151 - 1) + 1);
 
     GetPokemon(pokemonId).then((responseJson) => {
       setPokemonInfo(responseJson);
@@ -14,7 +14,6 @@ export default function IconButton({ setPokemonInfo, setPokemonDescription }) {
       setPokemonDescription(responseJson);
     });
   };
-  //console.log(buttonCallback());
 
   return (
     <RandomuttonCustom>
