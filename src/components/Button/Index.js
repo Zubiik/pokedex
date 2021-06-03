@@ -21,7 +21,7 @@ export default function Button({
   };
   return (
     <SearchButtonCustom>
-      <SearchTextCustom onClick={buttonCallback}>Search!</SearchTextCustom>
+      <SearchTextCustom onClick={buttonCallback}>Search !</SearchTextCustom>
     </SearchButtonCustom>
   );
 }

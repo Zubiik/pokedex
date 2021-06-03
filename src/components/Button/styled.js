@@ -13,4 +13,5 @@ export const SearchButtonCustom = styled.div`
 
 export const SearchTextCustom = styled.div`
   font-size: 16px;
+  font-weight: bold;
 `;

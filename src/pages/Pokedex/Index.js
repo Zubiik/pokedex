@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Info from "../../components/Info/Index";
 
 export default function Pokedex({

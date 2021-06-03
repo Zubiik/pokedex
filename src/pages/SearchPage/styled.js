@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 
 export const SearchPageCustom = styled.div`
-  border: 1px blue solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,14 +11,13 @@ export const SearchPageCustom = styled.div`
   border-radius: 20px;
   width: 414px;
   height: 403px;
-  background: #e9ecea; ;
+  background: rgba(255, 255, 255, 0.8);
 `;
 
 export const ImgCustom = styled.div`
   max-width: 75px;
   max-height: 75px;
-  border: 1px solid red;
-  margin: 80px;
+  margin: 70px;
 `;
 export const ImgUrl = styled.img`
   max-width: 75px;
