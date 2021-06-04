@@ -1,22 +1,25 @@
 import styled from "@emotion/styled";
 
-export const InfoContainerCustom = styled.div`
+export const HandlerContainer = styled.div`
   display: flex;
-  position: fixed;
-  top: 10%;
-  left: 70%;
+  justify-content: flex-end;
+  padding: 1rem;
+`;
+
+export const InfoContainerCustom = styled.div`
   border-radius: 20px;
-  width: 290px;
-  height: 265px;
+  width: 19rem;
+  height: 16rem;
   background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
+  padding: 1rem;
   font-weight: bold;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
 `;
 
 export const TextContainer = styled.div`
   display: flex;
-  min-width: 290px;
+  min-width: 19rem;
   flex-direction: column;
 `;
 
@@ -25,23 +28,20 @@ export const TextInfoBox = styled.div`
   justify-content: space-between;
   text-align: right;
 `;
-export const DescriptionText = styled.p`
-  display: flex;
-  flex-direction: column-reverse;
-  align-self: baseline;
-  position: absolute;
-  bottom: 10%;
-  padding: 5px;
+export const DescriptionText = styled.div`
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   color: #e76f51;
 `;
 
-export const TextEspacement = styled.p`
-  padding: 10px;
+export const TextLabel = styled.p`
+  padding: 1rem;
   color: #264653;
+  display: flex;
 `;
 
-export const InfoRequestCustom = styled(TextEspacement)`
+export const InfoRequestCustom = styled(TextLabel)`
   color: #e76f51;
 `;
 

@@ -15,13 +15,13 @@ export const SearchPageCustom = styled.div`
 `;
 
 export const ImgCustom = styled.div`
-  max-width: 75px;
-  max-height: 75px;
+  max-width: 5rem;
+  max-height: 5rem;
   margin: 70px;
 `;
 export const ImgUrl = styled.img`
-  max-width: 75px;
-  max-height: 75px;
+  max-width: 5rem;
+  max-height: 5rem;
 `;
 
 export const ButtonContainer = styled.div`
