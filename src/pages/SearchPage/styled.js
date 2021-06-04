@@ -28,6 +28,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-around;
   position: absolute;
+  align-items: inherit;
   bottom: 60px;
   right: 5%;
   left: 5%;
