@@ -6,7 +6,6 @@ import { HandlerCustom } from "./styled.js";
 export default function HandlerPage() {
   const [pokemonInfo, setPokemonInfo] = useState(null);
   const [pokemonDescription, setPokemonDescription] = useState({});
-  console.log(pokemonInfo);
   return (
     <HandlerCustom>
       {!pokemonInfo ? (

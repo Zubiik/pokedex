@@ -15,8 +15,6 @@ export default function Info({
   pokemonDescription,
   setPokemonDescription,
 }) {
-  console.log(pokemonDescription);
-
   return (
     <HandlerContainer>
       <InfoContainerCustom>
