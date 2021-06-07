@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const SearchButtonCustom = styled.div`
   width: 10rem;
   height: 5rem;
-  background-color: #f4a261;
+  background-color: ${({ theme }) => theme.colors.orange};
   border-radius: 80px;
   color: #ffff;
   display: flex;

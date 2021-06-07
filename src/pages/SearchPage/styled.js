@@ -11,7 +11,7 @@ export const SearchPageCustom = styled.div`
   border-radius: 20px;
   width: 414px;
   height: 403px;
-  background: rgba(255, 255, 255, 0.8);
+  background: ${({ theme }) => theme.background.transparentGrey};
 `;
 
 export const ImgCustom = styled.div`
