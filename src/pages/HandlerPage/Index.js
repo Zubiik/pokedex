@@ -4,23 +4,25 @@ import SearchPage from "../SearchPage/Index";
 import { HandlerCustom } from "./styled.js";
 
 export default function HandlerPage() {
-  const [pokemonInfo, setPokemonInfo] = useState({});
+  const [pokemonInfo, setPokemonInfo] = useState(null);
   const [pokemonDescription, setPokemonDescription] = useState({});
-
   return (
     <HandlerCustom>
-      <Pokedex
-        pokemonInfo={pokemonInfo}
-        setPokemonInfo={setPokemonInfo}
-        pokemonDescription={pokemonDescription}
-        setPokemonDescription={setPokemonDescription}
-      />
-      <SearchPage
-        pokemonInfo={pokemonInfo}
-        setPokemonInfo={setPokemonInfo}
-        pokemonDescription={pokemonDescription}
-        setPokemonDescription={setPokemonDescription}
-      />
+      {!pokemonInfo ? (
+        <SearchPage
+          pokemonInfo={pokemonInfo}
+          setPokemonInfo={setPokemonInfo}
+          pokemonDescription={pokemonDescription}
+          setPokemonDescription={setPokemonDescription}
+        />
+      ) : (
+        <Pokedex
+          pokemonInfo={pokemonInfo}
+          setPokemonInfo={setPokemonInfo}
+          pokemonDescription={pokemonDescription}
+          setPokemonDescription={setPokemonDescription}
+        />
+      )}
     </HandlerCustom>
   );
 }

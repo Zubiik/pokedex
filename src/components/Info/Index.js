@@ -1,3 +1,14 @@
+import {
+  InfoContainerCustom,
+  TextContainer,
+  TextInfoBox,
+  DescriptionText,
+  TextLabel,
+  AbilitiesContainer,
+  InfoRequestCustom,
+  HandlerContainer,
+} from "./styled";
+
 export default function Info({
   pokemonInfo,
   setPokemonInfo,
@@ -5,15 +16,42 @@ export default function Info({
   setPokemonDescription,
 }) {
   return (
-    <div>
-      <p>{pokemonInfo.weight}</p>
-      <p>{pokemonInfo.height}</p>
-      <p>{pokemonInfo.abilities && pokemonInfo.abilities[0].ability.name}</p>
-      <p>{pokemonInfo.abilities && pokemonInfo.abilities[1].ability.name}</p>
-      <p>
-        {pokemonDescription.flavor_text_entries &&
-          pokemonDescription.flavor_text_entries[0].flavor_text}
-      </p>
-    </div>
+    <HandlerContainer>
+      <InfoContainerCustom>
+        <TextContainer>
+          <TextInfoBox>
+            <TextLabel>Weight</TextLabel>
+            <InfoRequestCustom>{pokemonInfo.weight} kg</InfoRequestCustom>
+          </TextInfoBox>
+          <TextInfoBox>
+            <TextLabel>Height</TextLabel>
+            <InfoRequestCustom>{pokemonInfo.height} m</InfoRequestCustom>
+          </TextInfoBox>
+          <TextInfoBox>
+            <TextLabel>Abilities</TextLabel>
+            <AbilitiesContainer>
+              {pokemonInfo.abilities.map((ability, index) => {
+                return <p>{ability.ability.name}</p>;
+              })}
+            </AbilitiesContainer>
+          </TextInfoBox>
+          <TextInfoBox>
+            <DescriptionText>
+              <TextLabel>Description</TextLabel>
+              {pokemonDescription.flavor_text_entries &&
+                pokemonDescription.flavor_text_entries.map(
+                  (description, index) => {
+                    return (
+                      index === 0 && (
+                        <p key={index}>{description.flavor_text}</p>
+                      )
+                    );
+                  }
+                )}
+            </DescriptionText>
+          </TextInfoBox>
+        </TextContainer>
+      </InfoContainerCustom>
+    </HandlerContainer>
   );
 }

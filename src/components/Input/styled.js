@@ -10,8 +10,8 @@ export const InputContainerCustom = styled.div`
   transform: translate(-50%, -50%);
 `;
 export const InputCustom = styled.input`
-  width: 280px;
-  height: 56px;
+  width: 18rem;
+  height: 4rem;
 `;
 
 export const TextCustom = styled.p`
