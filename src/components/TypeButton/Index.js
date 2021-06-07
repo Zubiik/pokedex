@@ -1,5 +1,4 @@
 import GetPokemon from "../../api/GetPokemon";
-import {} from "./styled.js";
 export default function Button({
   pokemon,
   pokemonInfo,
@@ -7,5 +6,15 @@ export default function Button({
   pokemonDescription,
   setPokemonDescription,
 }) {
-  return <div>{pokemonInfo}</div>;
+  GetPokemon(pokemon).then((responseJson) => {
+    //setPokemonInfo(responseJson);
+  });
+  return (
+    <div>
+      {
+        //pokemonInfo.types.map((types, index) => {
+        //return <p key={index}>{types.type}hey</p>;
+      }
+    </div>
+  );
 }
