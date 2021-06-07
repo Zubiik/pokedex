@@ -38,19 +38,16 @@ export default function Info({
           <TextInfoBox>
             <DescriptionText>
               <TextLabel>Description</TextLabel>
-              {pokemonDescription.flavor_text_entries.map(
-                (description, index) => {
-                  return (
-                    <p>
-                      {description.flavor_text === [0]
-                        ? description.flavor_text
-                        : null}
-                    </p>
-                  );
-                }
-              )}
               {pokemonDescription.flavor_text_entries &&
-                pokemonDescription.flavor_text_entries[0].flavor_text}
+                pokemonDescription.flavor_text_entries.map(
+                  (description, index) => {
+                    return (
+                      index === 0 && (
+                        <p key={index}>{description.flavor_text}</p>
+                      )
+                    );
+                  }
+                )}
             </DescriptionText>
           </TextInfoBox>
         </TextContainer>
