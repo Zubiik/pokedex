@@ -14,7 +14,7 @@ export default function Pokedex({
         pokemonDescription={pokemonDescription}
         setPokemonDescription={setPokemonDescription}
       />
-      <TypeButton />
+      <TypeButton pokemonInfo={pokemonInfo} setPokemonInfo={setPokemonInfo} />
     </div>
   );
 }

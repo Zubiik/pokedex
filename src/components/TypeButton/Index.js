@@ -1,4 +1,3 @@
-import GetPokemon from "../../api/GetPokemon";
 export default function Button({
   pokemon,
   pokemonInfo,
@@ -6,15 +5,18 @@ export default function Button({
   pokemonDescription,
   setPokemonDescription,
 }) {
-  GetPokemon(pokemon).then((responseJson) => {
-    //setPokemonInfo(responseJson);
-  });
   return (
     <div>
-      {
-        //pokemonInfo.types.map((types, index) => {
-        //return <p key={index}>{types.type}hey</p>;
-      }
+      {pokemonInfo.types.map((type, index) => {
+        console.log(type.type.name);
+        console.log(pokemonInfo);
+        return (
+          <p key={index}>
+            hey
+            {type.type.name}
+          </p>
+        );
+      })}
     </div>
   );
 }
