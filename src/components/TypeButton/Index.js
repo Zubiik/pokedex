@@ -1,6 +1,10 @@
-import { ButtonCustom, TextCustom } from "./styled.js";
-
-export default function Button({
+import {
+  ButtonCustom,
+  TextCustom,
+  TypeContainer,
+  ButtonContainer,
+} from "./styled.js";
+export default function TypeButton({
   pokemon,
   pokemonInfo,
   setPokemonInfo,
@@ -8,16 +12,16 @@ export default function Button({
   setPokemonDescription,
 }) {
   return (
-    <div>
+    <TypeContainer>
       {pokemonInfo.types.map((type, index) => {
         return (
-          <div>
+          <ButtonContainer>
             <ButtonCustom type={type.type.name} key={index}>
               <TextCustom>{type.type.name}</TextCustom>
             </ButtonCustom>
-          </div>
+          </ButtonContainer>
         );
       })}
-    </div>
+    </TypeContainer>
   );
 }
