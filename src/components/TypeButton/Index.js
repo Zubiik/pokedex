@@ -1,3 +1,5 @@
+import { ButtonCustom, TextCustom } from "./styled.js";
+
 export default function Button({
   pokemon,
   pokemonInfo,
@@ -8,13 +10,12 @@ export default function Button({
   return (
     <div>
       {pokemonInfo.types.map((type, index) => {
-        console.log(type.type.name);
-        console.log(pokemonInfo);
         return (
-          <p key={index}>
-            hey
-            {type.type.name}
-          </p>
+          <div>
+            <ButtonCustom type={type.type.name} key={index}>
+              <TextCustom>{type.type.name}</TextCustom>
+            </ButtonCustom>
+          </div>
         );
       })}
     </div>
