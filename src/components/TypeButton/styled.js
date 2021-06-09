@@ -12,6 +12,7 @@ export const ButtonCustom = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const TextCustom = styled.div`

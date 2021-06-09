@@ -1,4 +1,4 @@
-import { ImageCustom } from "./styled";
+import { ImageCustom, ContainerCustom } from "./styled";
 import TypeButton from "../../components/TypeButton/Index";
 export default function Sprites({
   pokemonInfo,
@@ -7,7 +7,7 @@ export default function Sprites({
   setPokemonDescription,
 }) {
   return (
-    <div>
+    <ContainerCustom>
       <ImageCustom
         alt="pokemon fanArt"
         src={
@@ -16,6 +16,6 @@ export default function Sprites({
         }
       />
       <TypeButton pokemonInfo={pokemonInfo} setPokemonInfo={setPokemonInfo} />
-    </div>
+    </ContainerCustom>
   );
 }

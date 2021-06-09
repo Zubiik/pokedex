@@ -2,8 +2,12 @@ import styled from "@emotion/styled";
 
 export const ImageCustom = styled.img`
   display: flex;
-  justify-content: center;
-  height: 18rem;
+  justify-content: space-between;
+  height: 19rem;
   width: 23rem;
-  border: 1px solid blue;
+`;
+export const ContainerCustom = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
