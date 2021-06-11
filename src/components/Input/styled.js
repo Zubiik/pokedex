@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { theme } from "../../theme";
 
 export const InputContainerCustom = styled.div`
   display: flex;
@@ -15,9 +16,9 @@ export const InputCustom = styled.input`
 `;
 
 export const TextCustom = styled.p`
-  color: #8f8f8f;
+  color: ${({ theme }) => theme.colors.darkGrey};
   font-weight: bold;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.size.little};
   display: flex;
   align-self: flex-start;
 `;
