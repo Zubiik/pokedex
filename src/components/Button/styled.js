@@ -5,7 +5,7 @@ export const SearchButtonCustom = styled.div`
   height: 5rem;
   background-color: ${({ theme }) => theme.colors.orange};
   border-radius: 80px;
-  color: #ffff;
+  color: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: center;
   align-items: center;
