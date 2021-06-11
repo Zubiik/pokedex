@@ -15,8 +15,8 @@ export default function TypeButton({
     <TypeContainer>
       {pokemonInfo.types.map((type, index) => {
         return (
-          <ButtonContainer>
-            <ButtonCustom type={type.type.name} key={index}>
+          <ButtonContainer key={index}>
+            <ButtonCustom type={type.type.name}>
               <TextCustom>{type.type.name}</TextCustom>
             </ButtonCustom>
           </ButtonContainer>
