@@ -2,7 +2,7 @@ import Info from "../../components/Info/Index";
 import Stats from "../../components/Stats/Index";
 import Sprite from "../../components/sprites/Index";
 import { PokedexCustom } from "./styled";
-
+import Header from "../../components/header/Index";
 export default function Pokedex({
   pokemon,
   pokemonInfo,
@@ -12,6 +12,7 @@ export default function Pokedex({
 }) {
   return (
     <PokedexCustom>
+      <Header pokemonInfo={pokemonInfo} />
       <Stats pokemonInfo={pokemonInfo} />
       <Sprite
         pokemon={pokemon}

@@ -12,6 +12,10 @@ export default function HandlerPage() {
     setterFunction(event.target.value);
   };
 
+  const arrowCallback = () => {
+    setPokemonInfo(null);
+  };
+
   return (
     <HandlerCustom>
       {!pokemonInfo ? (
@@ -25,13 +29,16 @@ export default function HandlerPage() {
           inputCallback={inputCallback}
         />
       ) : (
-        <Pokedex
-          pokemon={pokemon}
-          pokemonInfo={pokemonInfo}
-          setPokemonInfo={setPokemonInfo}
-          pokemonDescription={pokemonDescription}
-          setPokemonDescription={setPokemonDescription}
-        />
+        <div>
+          <div onClick={arrowCallback}>RETOUR</div>
+          <Pokedex
+            pokemon={pokemon}
+            pokemonInfo={pokemonInfo}
+            setPokemonInfo={setPokemonInfo}
+            pokemonDescription={pokemonDescription}
+            setPokemonDescription={setPokemonDescription}
+          />
+        </div>
       )}
     </HandlerCustom>
   );
