@@ -4,6 +4,8 @@ export const theme = {
     metalBlue: "#264653",
     white: "#ffff",
     darkGrey: "#8f8f8f",
+    lightGrey: "#c4c4c4",
+    skyBlue: "#38a8d5",
   },
   background: {
     transparentGrey: "rgba(255, 255, 255, 0.8)",
