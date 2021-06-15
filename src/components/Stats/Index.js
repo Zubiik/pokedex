@@ -12,18 +12,18 @@ export default function Stats({ pokemonInfo }) {
   const pokemonStats = (stat) => {
     const division = stat.base_stat / 10;
     const statResult = Math.round(division);
-    var emptyArray = [];
+    var statArray = [];
     for (let i = 0; i < 15; i++) {
       if (i < statResult) {
-        emptyArray.push(<LonelyStat />);
+        statArray.push(<LonelyStat />);
       } else {
-        emptyArray.push(<EmptyStat />);
+        statArray.push(<EmptyStat />);
       }
     }
 
     return (
       <Item>
-        {emptyArray.map((item) => (
+        {statArray.map((item) => (
           <div>{item}</div>
         ))}
       </Item>
