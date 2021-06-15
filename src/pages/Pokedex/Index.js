@@ -1,5 +1,7 @@
 import Info from "../../components/Info/Index";
 import TypeButton from "../../components/TypeButton/Index";
+import Stats from "../../components/Stats/Index";
+
 export default function Pokedex({
   pokemonInfo,
   setPokemonInfo,
@@ -8,6 +10,7 @@ export default function Pokedex({
 }) {
   return (
     <div>
+      <Stats pokemonInfo={pokemonInfo} />
       <Info
         pokemonInfo={pokemonInfo}
         setPokemonInfo={setPokemonInfo}
