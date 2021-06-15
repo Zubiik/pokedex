@@ -3,13 +3,32 @@ import {
   EmptyStat,
   LonelyStat,
   Item,
-  TextToHide,
   TextContainer,
   ArrayContainer,
   TextCustom,
 } from "./styled";
 
 export default function Stats({ pokemonInfo }) {
+  const pokemonStats = (stat) => {
+    const division = stat.base_stat / 10;
+    const statResult = Math.round(division);
+    var emptyArray = [];
+    for (let i = 0; i < 15; i++) {
+      if (i < statResult) {
+        emptyArray.push(<LonelyStat />);
+      } else {
+        emptyArray.push(<EmptyStat />);
+      }
+    }
+
+    return (
+      <Item>
+        {emptyArray.map((item) => (
+          <div>{item}</div>
+        ))}
+      </Item>
+    );
+  };
   return (
     <ArrayContainer>
       <TextContainer>
@@ -22,24 +41,7 @@ export default function Stats({ pokemonInfo }) {
       </TextContainer>
       <StatsContainer>
         {pokemonInfo.stats.map((stat, index) => {
-          const division = stat.base_stat / 10;
-          const statResult = Math.round(division);
-          var toto = [];
-          for (let i = 0; i < 15; i++) {
-            if (i < statResult) {
-              toto.push(<LonelyStat />);
-            } else {
-              toto.push(<EmptyStat />);
-            }
-          }
-
-          return (
-            <Item>
-              {toto.map((item) => (
-                <TextToHide>{item}</TextToHide>
-              ))}
-            </Item>
-          );
+          return pokemonStats(stat);
         })}
       </StatsContainer>
     </ArrayContainer>
