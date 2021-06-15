@@ -1,7 +1,7 @@
 import Info from "../../components/Info/Index";
-import TypeButton from "../../components/TypeButton/Index";
 import Stats from "../../components/Stats/Index";
 import Sprite from "../../components/sprites/Index";
+import { PokedexCustom } from "./styled";
 
 export default function Pokedex({
   pokemon,
@@ -11,9 +11,8 @@ export default function Pokedex({
   setPokemonDescription,
 }) {
   return (
-    <div>
+    <PokedexCustom>
       <Stats pokemonInfo={pokemonInfo} />
-      <Sprite pokemon={pokemon} />
       <Sprite
         pokemon={pokemon}
         pokemonInfo={pokemonInfo}
@@ -25,6 +24,6 @@ export default function Pokedex({
         pokemonDescription={pokemonDescription}
         setPokemonDescription={setPokemonDescription}
       />
-    </div>
+    </PokedexCustom>
   );
 }
