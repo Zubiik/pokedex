@@ -11,16 +11,14 @@ import {
 } from "./styled.js";
 import Pokeball from "../../image/pokeball 4.png";
 export default function SearchPage({
+  pokemon,
+  setPokemon,
+  inputCallback,
   pokemonInfo,
   setPokemonInfo,
   pokemonDescription,
   setPokemonDescription,
 }) {
-  const [pokemon, setPokemon] = useState("");
-
-  const inputCallback = (event, setterFunction) => {
-    setterFunction(event.target.value);
-  };
   return (
     <SearchPageCustom>
       <ImgContainer>
