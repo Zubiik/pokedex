@@ -1,8 +1,9 @@
+import { HeaderCustom, TextCustom } from "./styled";
 export default function HeaderTitle({ pokemonInfo }) {
   return (
-    <div>
-      <p>{pokemonInfo.name}</p>
-      <p>#{pokemonInfo.id}</p>
-    </div>
+    <HeaderCustom>
+      <TextCustom>{pokemonInfo.name}</TextCustom>
+      <TextCustom>#{pokemonInfo.id}</TextCustom>
+    </HeaderCustom>
   );
 }

@@ -11,20 +11,22 @@ export default function Pokedex({
   setPokemonDescription,
 }) {
   return (
-    <PokedexCustom>
+    <div>
       <Header pokemonInfo={pokemonInfo} />
-      <Stats pokemonInfo={pokemonInfo} />
-      <Sprite
-        pokemon={pokemon}
-        pokemonInfo={pokemonInfo}
-        setPokemonInfo={setPokemonInfo}
-      />
-      <Info
-        pokemonInfo={pokemonInfo}
-        setPokemonInfo={setPokemonInfo}
-        pokemonDescription={pokemonDescription}
-        setPokemonDescription={setPokemonDescription}
-      />
-    </PokedexCustom>
+      <PokedexCustom>
+        <Stats pokemonInfo={pokemonInfo} />
+        <Sprite
+          pokemon={pokemon}
+          pokemonInfo={pokemonInfo}
+          setPokemonInfo={setPokemonInfo}
+        />
+        <Info
+          pokemonInfo={pokemonInfo}
+          setPokemonInfo={setPokemonInfo}
+          pokemonDescription={pokemonDescription}
+          setPokemonDescription={setPokemonDescription}
+        />
+      </PokedexCustom>
+    </div>
   );
 }
