@@ -7,6 +7,7 @@ export default function HandlerPage() {
   const [pokemonInfo, setPokemonInfo] = useState(null);
   const [pokemonDescription, setPokemonDescription] = useState({});
   const [pokemon, setPokemon] = useState("");
+  const [pokemonEvolution, setPokemonEvolution] = useState({});
 
   const inputCallback = (event, setterFunction) => {
     setterFunction(event.target.value);
@@ -26,6 +27,8 @@ export default function HandlerPage() {
         />
       ) : (
         <Pokedex
+          pokemonEvolution={pokemonEvolution}
+          setPokemonEvolution={setPokemonEvolution}
           pokemon={pokemon}
           pokemonInfo={pokemonInfo}
           setPokemonInfo={setPokemonInfo}
