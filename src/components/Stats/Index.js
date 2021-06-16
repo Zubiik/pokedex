@@ -23,8 +23,8 @@ export default function Stats({ pokemonInfo }) {
 
     return (
       <Item>
-        {statArray.map((item) => (
-          <div>{item}</div>
+        {statArray.map((item, index) => (
+          <div key={index}>{item}</div>
         ))}
       </Item>
     );
