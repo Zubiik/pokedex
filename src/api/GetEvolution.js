@@ -1,4 +1,4 @@
-export default async function GetEvolution(pokemonInfo) {
+export default function GetEvolution(pokemonInfo) {
   let url = "https://pokeapi.co/api/v2/pokemon-species/" + pokemonInfo.id + "/";
 
   let request = {
@@ -8,15 +8,16 @@ export default async function GetEvolution(pokemonInfo) {
     },
     method: "GET",
   };
-  return await fetch(url, request)
+
+  return fetch(url, request)
     .then((response) => {
       return response.json();
     })
     .then((responseJson) => {
-      var evolve = responseJson.evolution_chain;
+      return responseJson.evolution_chain.url;
     })
-    .then(async (evolve) => {
-      let url = evolve;
+    .then((evolutionChainURL) => {
+      let url = evolutionChainURL;
       let request = {
         headers: {
           Accept: "application/json",
@@ -24,7 +25,7 @@ export default async function GetEvolution(pokemonInfo) {
         },
         method: "GET",
       };
-      return await fetch(url, request).then((response) => {
+      return fetch(url, request).then((response) => {
         return response.json();
       });
     })
