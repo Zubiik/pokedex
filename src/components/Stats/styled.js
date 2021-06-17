@@ -4,8 +4,8 @@ export const ArrayContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   background-color: ${({ theme }) => theme.colors.lightGrey};
-  max-width: max-content;
   padding: 0.5rem;
+  margin: 0.5rem;
 `;
 export const StatsContainer = styled.div`
   display: flex;
