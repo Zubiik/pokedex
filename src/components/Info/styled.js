@@ -50,3 +50,7 @@ export const AbilitiesContainer = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.colors.orange};
 `;
+
+export const AbilityText = styled.div`
+  padding-right: 0.5rem; ;
+`;
