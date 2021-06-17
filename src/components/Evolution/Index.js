@@ -6,8 +6,5 @@ export default function Evolution({
   pokemonEvolution,
   setPokemonEvolution,
 }) {
-  GetEvolution(pokemonInfo).then((responseJson) => {
-    console.log(responseJson.evolution_chain);
-  });
   return <div></div>;
 }

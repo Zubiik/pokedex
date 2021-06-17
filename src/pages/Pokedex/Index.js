@@ -30,7 +30,7 @@ export default function Pokedex({
         pokemonInfo={pokemonInfo}
         setPokemonInfo={setPokemonInfo}
         pokemonEvolution={pokemonEvolution}
-        setpokemonEvolution={setPokemonEvolution}
+        setPokemonEvolution={setPokemonEvolution}
       />
     </PokedexCustom>
   );
