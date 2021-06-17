@@ -1,5 +1,12 @@
-import { HeaderCustom, TextCustom } from "./styled";
-export default function HeaderTitle({ pokemonInfo }) {
+import {
+  HeaderCustom,
+  TextCustom,
+  HeaderContainer,
+  ArrowContainer,
+} from "./styled";
+import arrow from "../../image/arrow.png";
+
+export default function HeaderTitle({ pokemonInfo, setPokemonInfo }) {
   const pokemonId = pokemonInfo.id;
 
   const pokemonNumber = () => {
@@ -13,10 +20,21 @@ export default function HeaderTitle({ pokemonInfo }) {
     }
   };
 
+  const arrowCallback = () => {
+    setPokemonInfo(null);
+  };
   return (
-    <HeaderCustom>
-      <TextCustom>{pokemonInfo.name}</TextCustom>
-      <TextCustom>#{pokemonNumber()}</TextCustom>
-    </HeaderCustom>
+    <HeaderContainer>
+      <ArrowContainer>
+        <img alt="arrow" src={arrow} onClick={arrowCallback} />
+      </ArrowContainer>
+      <HeaderCustom>
+        <TextCustom>
+          {pokemonInfo.name &&
+            pokemonInfo.name[0].toUpperCase() + pokemonInfo.name.slice(1)}
+        </TextCustom>
+        <TextCustom>#{pokemonNumber()}</TextCustom>
+      </HeaderCustom>
+    </HeaderContainer>
   );
 }

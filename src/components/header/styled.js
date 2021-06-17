@@ -5,11 +5,22 @@ export const HeaderCustom = styled.div`
   flex: 1;
   align-self: center;
   justify-content: center;
-  border: 1px solid blue;
 `;
 
 export const TextCustom = styled.div`
   font-size: ${({ theme }) => theme.size.fat};
   color: ${({ theme }) => theme.colors.mediumGrey};
-  padding: 1rem;
+  padding: 0.3rem;
+`;
+
+export const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.lightOrange};
+`;
+
+export const ArrowContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
 `;

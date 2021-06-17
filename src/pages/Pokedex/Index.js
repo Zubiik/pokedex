@@ -12,7 +12,7 @@ export default function Pokedex({
 }) {
   return (
     <div>
-      <Header pokemonInfo={pokemonInfo} />
+      <Header pokemonInfo={pokemonInfo} setPokemonInfo={setPokemonInfo} />
       <PokedexCustom>
         <Stats pokemonInfo={pokemonInfo} />
         <Sprite

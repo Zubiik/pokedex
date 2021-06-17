@@ -2,7 +2,6 @@ import { useState } from "react";
 import Pokedex from "../Pokedex/Index";
 import SearchPage from "../SearchPage/Index";
 import { HandlerCustom } from "./styled.js";
-
 export default function HandlerPage() {
   const [pokemonInfo, setPokemonInfo] = useState(null);
   const [pokemonDescription, setPokemonDescription] = useState({});
@@ -10,10 +9,6 @@ export default function HandlerPage() {
 
   const inputCallback = (event, setterFunction) => {
     setterFunction(event.target.value);
-  };
-
-  const arrowCallback = () => {
-    setPokemonInfo(null);
   };
 
   return (
@@ -30,7 +25,6 @@ export default function HandlerPage() {
         />
       ) : (
         <div>
-          <div onClick={arrowCallback}>RETOUR</div>
           <Pokedex
             pokemon={pokemon}
             pokemonInfo={pokemonInfo}
