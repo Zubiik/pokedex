@@ -1,10 +1,11 @@
+import { React, useCallback } from "react";
 import GetPokemon from "../../api/GetPokemon";
 import GetPokemonDescription from "../../api/GetPokemonDescription";
 import { RandomuttonCustom } from "./styled.js";
 import Vector from "../../image/Vector.png";
 
 export default function IconButton({ setPokemonInfo, setPokemonDescription }) {
-  const buttonCallback = () => {
+  const buttonCallback = useCallback(() => {
     const pokemonId = Math.round(Math.random() * (151 - 1) + 1);
 
     GetPokemon(pokemonId).then((responseJson) => {
@@ -13,7 +14,7 @@ export default function IconButton({ setPokemonInfo, setPokemonDescription }) {
     GetPokemonDescription(pokemonId).then((responseJson) => {
       setPokemonDescription(responseJson);
     });
-  };
+  }, []);
 
   return (
     <RandomuttonCustom>
