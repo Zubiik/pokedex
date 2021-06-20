@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { theme } from "../../theme";
 
 export const InputContainerCustom = styled.div`
   display: flex;

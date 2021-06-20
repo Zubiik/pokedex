@@ -31,7 +31,7 @@ export default function Info({
             <TextLabel>Abilities</TextLabel>
             <AbilitiesContainer>
               {pokemonInfo.abilities.map((ability, index) => {
-                return <p>{ability.ability.name}</p>;
+                return <p key={index}>{ability.ability.name}</p>;
               })}
             </AbilitiesContainer>
           </TextInfoBox>
