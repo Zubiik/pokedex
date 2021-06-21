@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Pokedex from "../Pokedex/Index";
 import SearchPage from "../SearchPage/Index";
-import { HandlerCustom } from "./styled.js";
+import { HandlerCustom, SearchPageCustom } from "./styled.js";
 
 export default function HandlerPage() {
   const [pokemonInfo, setPokemonInfo] = useState(null);
@@ -15,15 +15,17 @@ export default function HandlerPage() {
   return (
     <HandlerCustom>
       {!pokemonInfo ? (
-        <SearchPage
-          pokemon={pokemon}
-          setPokemon={setPokemon}
-          pokemonInfo={pokemonInfo}
-          setPokemonInfo={setPokemonInfo}
-          pokemonDescription={pokemonDescription}
-          setPokemonDescription={setPokemonDescription}
-          inputCallback={inputCallback}
-        />
+        <SearchPageCustom>
+          <SearchPage
+            pokemon={pokemon}
+            setPokemon={setPokemon}
+            pokemonInfo={pokemonInfo}
+            setPokemonInfo={setPokemonInfo}
+            pokemonDescription={pokemonDescription}
+            setPokemonDescription={setPokemonDescription}
+            inputCallback={inputCallback}
+          />
+        </SearchPageCustom>
       ) : (
         <Pokedex
           pokemon={pokemon}
