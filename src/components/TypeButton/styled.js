@@ -27,6 +27,7 @@ export const TypeContainer = styled.div`
 
 export const ButtonContainer = styled.div`
   flex: 1;
+  padding: 1rem;
   display: flex;
   justify-content: center;
 `;
