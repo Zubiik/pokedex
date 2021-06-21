@@ -7,7 +7,7 @@ export const HeaderCustom = styled.div`
   justify-content: center;
 `;
 
-export const TextCustom = styled.div`
+export const TextCustom = styled.p`
   font-size: ${({ theme }) => theme.size.fat};
   color: ${({ theme }) => theme.colors.mediumGrey};
   padding: 0.3rem;

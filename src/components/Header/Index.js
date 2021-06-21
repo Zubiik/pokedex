@@ -9,7 +9,7 @@ import arrow from "../../image/arrow.png";
 export default function HeaderTitle({ pokemonInfo, setPokemonInfo }) {
   const pokemonId = pokemonInfo.id;
 
-  const pokemonNumber = () => {
+  const pokemonById = () => {
     if (pokemonId < 9) {
       return "00" + pokemonId;
     }
@@ -33,7 +33,7 @@ export default function HeaderTitle({ pokemonInfo, setPokemonInfo }) {
           {pokemonInfo.name &&
             pokemonInfo.name[0].toUpperCase() + pokemonInfo.name.slice(1)}
         </TextCustom>
-        <TextCustom>#{pokemonNumber()}</TextCustom>
+        <TextCustom>#{pokemonById()}</TextCustom>
       </HeaderCustom>
     </HeaderContainer>
   );

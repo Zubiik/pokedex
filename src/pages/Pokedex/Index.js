@@ -2,7 +2,7 @@ import Info from "../../components/Info/Index";
 import Stats from "../../components/Stats/Index";
 import Sprite from "../../components/sprites/Index";
 import { PokedexCustom } from "./styled";
-import Header from "../../components/header/Index";
+import Header from "../../components/Header/Index";
 export default function Pokedex({
   pokemon,
   pokemonInfo,

@@ -24,15 +24,13 @@ export default function HandlerPage() {
           inputCallback={inputCallback}
         />
       ) : (
-        <div>
-          <Pokedex
-            pokemon={pokemon}
-            pokemonInfo={pokemonInfo}
-            setPokemonInfo={setPokemonInfo}
-            pokemonDescription={pokemonDescription}
-            setPokemonDescription={setPokemonDescription}
-          />
-        </div>
+        <Pokedex
+          pokemon={pokemon}
+          pokemonInfo={pokemonInfo}
+          setPokemonInfo={setPokemonInfo}
+          pokemonDescription={pokemonDescription}
+          setPokemonDescription={setPokemonDescription}
+        />
       )}
     </HandlerCustom>
   );
