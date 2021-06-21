@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 export const SearchButtonCustom = styled.div`
+  margin: 5px;
   width: 10rem;
   height: 5rem;
   background-color: ${({ theme }) => theme.colors.orange};
