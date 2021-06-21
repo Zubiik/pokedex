@@ -4,9 +4,7 @@ import GetPokemonDescription from "../../api/GetPokemonDescription";
 import { SearchButtonCustom, SearchTextCustom } from "./styled.js";
 export default function Button({
   pokemon,
-  pokemonInfo,
   setPokemonInfo,
-  pokemonDescription,
   setPokemonDescription,
 }) {
   const buttonCallback = useCallback(() => {
@@ -20,7 +18,7 @@ export default function Button({
         setPokemonDescription(responseJson);
       });
     }
-  }, []);
+  }, [pokemon]);
 
   return (
     <SearchButtonCustom onClick={buttonCallback}>
