@@ -13,21 +13,15 @@ export default function Stats({ pokemonInfo }) {
     const division = stat.base_stat / 10;
     const statResult = Math.round(division);
     var statArray = [];
-    for (let i = 0; i <= 15; i++) {
-      if (i < statResult) {
-        statArray.push(<LonelyStat />);
-      } else {
+    for (let i = 0; i < 15; i++) {
+      if (i < 15 - statResult) {
         statArray.push(<EmptyStat />);
+      } else {
+        statArray.push(<LonelyStat />);
       }
     }
 
-    return (
-      <Item>
-        {statArray.map((item) => (
-          <div>{item}</div>
-        ))}
-      </Item>
-    );
+    return <Item>{statArray}</Item>;
   };
   return (
     <ArrayContainer>
