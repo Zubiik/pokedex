@@ -7,7 +7,7 @@ import {
   AbilitiesContainer,
   InfoRequestCustom,
   HandlerContainer,
-  AbilityText,
+  AbilityName,
 } from "./styled";
 
 export default function Info({
@@ -32,7 +32,7 @@ export default function Info({
             <TextLabel>Abilities</TextLabel>
             <AbilitiesContainer>
               {pokemonInfo.abilities.map((ability, index) => {
-                return <AbilityText>{ability.ability.name}</AbilityText>;
+                return <AbilityName>{ability.ability.name}</AbilityName>;
               })}
             </AbilitiesContainer>
           </TextInfoBox>
@@ -44,7 +44,7 @@ export default function Info({
                   (description, index) => {
                     return (
                       index === 0 && (
-                        <div key={index}>{description.flavor_text}</div>
+                        <p key={index}>{description.flavor_text}</p>
                       )
                     );
                   }

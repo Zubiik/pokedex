@@ -51,6 +51,6 @@ export const AbilitiesContainer = styled.div`
   color: ${({ theme }) => theme.colors.orange};
 `;
 
-export const AbilityText = styled.div`
+export const AbilityName = styled.div`
   padding-right: 0.5rem; ;
 `;
