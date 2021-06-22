@@ -23,4 +23,19 @@ export const ArrowContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  transition-duration: 0.4s;
+  &:hover {
+    color: ${({ theme }) => theme.colors.lightOrange};
+    transform: scale(1.2);
+  }
+  border: none;
+`;
+
+export const ArrowImage = styled.img`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

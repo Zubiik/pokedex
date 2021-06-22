@@ -3,6 +3,7 @@ import {
   TextCustom,
   HeaderContainer,
   ArrowContainer,
+  ArrowImage,
 } from "./styled";
 import arrow from "../../image/arrow.png";
 
@@ -26,7 +27,7 @@ export default function HeaderTitle({ pokemonInfo, setPokemonInfo }) {
   return (
     <HeaderContainer>
       <ArrowContainer>
-        <img alt="arrow" src={arrow} onClick={arrowCallback} />
+        <ArrowImage alt="arrow" src={arrow} onClick={arrowCallback} />
       </ArrowContainer>
       <HeaderCustom>
         <TextCustom>
