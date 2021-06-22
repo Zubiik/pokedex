@@ -6,8 +6,8 @@ export const SearchPageCustom = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  width: 414px;
-  height: 403px;
+  width: 25rem;
+  height: 25rem;
   background: ${({ theme }) => theme.background.transparentGrey};
 `;
 
@@ -29,7 +29,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: inherit;
-  margin: 5px;
+  margin: 0.3rem;
   min-width: 100%;
 `;
 
@@ -37,5 +37,5 @@ export const ImgContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 10px;
+  margin: 0.6rem;
 `;

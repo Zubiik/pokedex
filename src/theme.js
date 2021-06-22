@@ -9,6 +9,7 @@ export const theme = {
   },
   background: {
     transparentGrey: "rgba(255, 255, 255, 0.8)",
+    linearGradient: "180deg, #f4a261 0%, #141a2b 100%",
   },
   size: {
     little: "14px",
