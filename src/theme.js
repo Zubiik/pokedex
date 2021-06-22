@@ -1,10 +1,12 @@
 export const theme = {
   colors: {
     orange: "#e76f51",
+    lightOrange: "#F4A261",
     metalBlue: "#264653",
     white: "#ffff",
     darkGrey: "#8f8f8f",
     lightGrey: "#c4c4c4",
+    mediumGrey: "rgba(38, 70, 83, 1)",
     skyBlue: "#38a8d5",
   },
   background: {
@@ -13,6 +15,7 @@ export const theme = {
   size: {
     little: "14px",
     medium: "16px",
+    fat: "30px",
   },
   typeColors: {
     normal: "#A8A87B",

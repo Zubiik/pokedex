@@ -2,7 +2,6 @@ import { useState } from "react";
 import Pokedex from "../Pokedex/Index";
 import SearchPage from "../SearchPage/Index";
 import { HandlerCustom } from "./styled.js";
-
 export default function HandlerPage() {
   const [pokemonInfo, setPokemonInfo] = useState(null);
   const [pokemonDescription, setPokemonDescription] = useState({});
