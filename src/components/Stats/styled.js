@@ -2,10 +2,10 @@ import styled from "@emotion/styled";
 
 export const ArrayContainer = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   background-color: ${({ theme }) => theme.colors.lightGrey};
-  max-width: max-content;
   padding: 0.5rem;
+  margin: 0.5rem;
 `;
 export const StatsContainer = styled.div`
   display: flex;
@@ -29,7 +29,7 @@ export const LonelyStat = styled.div`
 
 export const Item = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 `;
 
 export const EmptyStat = styled(LonelyStat)`
