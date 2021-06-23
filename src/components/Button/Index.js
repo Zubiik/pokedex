@@ -8,7 +8,7 @@ export default function Button({
   setPokemonDescription,
 }) {
   const buttonCallback = useCallback(() => {
-    if (pokemon === "") {
+    if (!pokemon) {
       alert("wallah écrit le nom d'un pokemon");
     } else {
       GetPokemon(pokemon).then((responseJson) => {
