@@ -23,12 +23,12 @@ export const TextContainer = styled.div`
   flex-direction: column;
 `;
 
-export const TextInfoBox = styled.div`
+export const TextInfoBox = styled.p`
   display: flex;
   justify-content: space-between;
   text-align: right;
 `;
-export const DescriptionText = styled.div`
+export const DescriptionText = styled.p`
   align-items: center;
   flex-direction: column;
   text-align: center;
@@ -49,4 +49,8 @@ export const AbilitiesContainer = styled.div`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.orange};
+`;
+
+export const AbilityName = styled.p`
+  padding-right: 0.5rem; ;
 `;
