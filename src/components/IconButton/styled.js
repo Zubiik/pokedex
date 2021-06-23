@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 
 export const RandomuttonCustom = styled.button`
-  border-radius: 75px;
-  width: 65px;
+  border-radius: 4rem;
+  width: 4rem;
   background-color: ${({ theme }) => theme.colors.orange};
-  height: 65px;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
