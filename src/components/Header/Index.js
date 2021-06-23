@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import {
   HeaderCustom,
   TextCustom,
@@ -5,6 +6,7 @@ import {
   ArrowContainer,
 } from "./styled";
 import arrow from "../../image/arrow.png";
+import React from "react";
 
 export default function HeaderTitle({ pokemonInfo, setPokemonInfo }) {
   const pokemonId = pokemonInfo.id;
@@ -19,10 +21,10 @@ export default function HeaderTitle({ pokemonInfo, setPokemonInfo }) {
       return pokemonId;
     }
   };
-
-  const arrowCallback = () => {
+  const arrowCallback = useCallback(() => {
     setPokemonInfo(null);
-  };
+  }, []);
+
   return (
     <HeaderContainer>
       <ArrowContainer>
