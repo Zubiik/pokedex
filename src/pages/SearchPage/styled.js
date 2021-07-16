@@ -5,7 +5,7 @@ export const SearchPageCustom = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 1rem;
   width: 25rem;
   height: 25rem;
   background: ${({ theme }) => theme.background.transparentGrey};
@@ -14,7 +14,7 @@ export const SearchPageCustom = styled.div`
 export const ImgCustom = styled.div`
   max-width: 5rem;
   max-height: 5rem;
-  margin: 30px;
+  margin: 2rem;
   display: flex;
   justify-content: center;
 `;
