@@ -1,7 +1,7 @@
 import { React, useCallback } from "react";
 import GetPokemon from "../../api/GetPokemon";
 import GetPokemonDescription from "../../api/GetPokemonDescription";
-import { RandomuttonCustom } from "./styled.js";
+import { RandomButtonCustom } from "./styled.js";
 import Vector from "../../image/Vector.png";
 
 export default function IconButton({ setPokemonInfo, setPokemonDescription }) {
@@ -17,10 +17,10 @@ export default function IconButton({ setPokemonInfo, setPokemonDescription }) {
   }, []);
 
   return (
-    <RandomuttonCustom>
+    <RandomButtonCustom>
       <div onClick={buttonCallback}>
         <img src={Vector} alt="arrow"></img>
       </div>
-    </RandomuttonCustom>
+    </RandomButtonCustom>
   );
 }
