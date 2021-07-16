@@ -12,7 +12,7 @@ export const SearchButtonCustom = styled.button`
   transition-duration: 0.4s;
   &:hover {
     background-color: ${({ theme }) => theme.colors.lightOrange};
-    color: white;
+    color:${({ theme }) => theme.colors.white} ;
   }
   border: none;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);

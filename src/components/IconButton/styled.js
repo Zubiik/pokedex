@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const RandomuttonCustom = styled.button`
+export const RandomButtonCustom = styled.button`
   border-radius: 4rem;
   width: 4rem;
   background-color: ${({ theme }) => theme.colors.orange};
@@ -12,7 +12,7 @@ export const RandomuttonCustom = styled.button`
   transition-duration: 0.4s;
   &:hover {
     background-color: ${({ theme }) => theme.colors.lightOrange};
-    color: white;
+    color:${({ theme }) => theme.colors.white};
   }
   border: none;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
